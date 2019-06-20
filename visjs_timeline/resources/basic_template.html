@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+  <style type="text/css">
+    INCLUDE_STYLE
+  </style>
+</head>
+<body>
+
+<div class="page-title">
+  INCLUDED_TITLE
+</div>
+
+<div id="visualization"></div>
+
+<script type="text/javascript">
+  // DOM element where the Timeline will be attached
+  var container = document.getElementById('visualization');
+
+  /*var groups = new vis.DataSet([
+   {"content":  "A", "id": "a", "value": 1,},
+    {"content": "A", "id": "b", "value": 2,},
+    {"content": "B", "id": "c", "value": 3,},
+  ]);*/
+
+  var groups = new vis.DataSet([ INCLUDE_GROUPS ]);
+
+  // Create a DataSet (allows two way data-binding)
+  var items = new vis.DataSet([ INCLUDE_ITEMS ]);
+
+  // Configuration for the Timeline
+  var options = {
+    editable: true,
+
+
+    // to configure no snapping at all:
+    //
+    //   snap: null
+    //
+    // or let the snap function return the date unchanged:
+    //
+    //   snap: function (date, scale, step) {
+    //     return date;
+    //   }
+  };
+
+
+  // Create a Timeline
+  var timeline = new vis.Timeline(container, items, options);
+  timeline.setGroups(groups);
+  timeline.setOptions({ orientation: 'both' });
+
+
+</script>
+
+<div class="details-title">
+  Details
+</div>
+
+INCLUDED_DETAILS
+
+</html>

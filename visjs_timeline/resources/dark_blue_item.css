@@ -1,0 +1,30 @@
+.vis-item.blue  {
+    background-color: rgb(0, 0, 0);
+    border-width: 2px;
+    border-color: rgb(83, 89, 124);
+    color: rgb(83, 89, 124);
+}
+
+.vis-item.blue .item_title  {
+    font-size: 12pt;
+    font-weight: bold;
+    color: rgb(83, 89, 124);
+}
+
+
+.vis-item.blue .item_detail  {
+    display: block;
+    line-height: 45%;
+    font-size: 10pt;
+    font-style: italic;
+    color: rgb(167, 167, 167);
+}
+
+.vis-item.blue.vis-selected .item_detail {
+    display: block;
+}
+
+.vis-item.blue.vis-selected {
+    /*background-color: rgb(87, 71, 71);*/
+    background-color: rgb(59, 62, 80);
+}

@@ -1,0 +1,48 @@
+body, html {
+    font-family: sans-serif;
+    background-color: black;
+    color: #191919;
+}
+
+.vis-timeline {
+    border: 0px solid rgb(255, 255, 255);
+    font-size: 9pt;
+    background: #000000;
+    color: #191919;
+}
+
+
+.vis-labelset .vis-label {
+    border-width: 1px;
+    border-color: #191919;
+    color: rgb(133, 132, 130);
+    font-size: 10pt;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.vis-item.vis-dot {
+    border-width: 4px;
+    border-radius: 4px;
+}
+
+
+.vis-time-axis .vis-text {
+    color: rgb(99, 151, 219);
+    font-size: 12pt;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

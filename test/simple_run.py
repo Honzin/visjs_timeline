@@ -1,9 +1,3 @@
-# visjs_timeline
-
-
-Work In Progress
-
-```python
 import datetime
 import visjs_timeline
 
@@ -63,5 +57,3 @@ setting = visjs_timeline.TimeLineSetting(items, groups, "Test Page Title", visjs
 visjs_time_line = visjs_timeline.VisJsTimeLine()
 visjs_time_line.render(setting)
 visjs_time_line.save("test_output.html")
-
-```

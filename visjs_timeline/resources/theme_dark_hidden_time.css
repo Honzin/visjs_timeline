@@ -1,0 +1,334 @@
+body, html {
+    font-family: sans-serif;
+    background-color: black;
+}
+
+.vis-timeline {
+    border: 0px solid rgb(255, 255, 255);
+    font-size: 9pt;
+    background: #000000;
+    color: red;
+}
+
+.vis-item {
+    border-color: rgb(255, 0, 0);
+    background-color: gray;
+    font-size: 10pt;
+    color: rgb(0, 0, 0);
+    /*box-shadow: 5px 5px 20px rgba(255, 0, 0, 0.5);*/
+}
+
+.vis-item,
+.vis-item.vis-line {
+    border-width: 1px;
+    border-color: rgb(99, 99, 99);
+}
+
+.vis-labelset .vis-label {
+    border-width: 1px;
+    border-color: #191919;
+    color: rgb(133, 132, 130);
+    font-size: 10pt;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.vis-item.vis-dot {
+    border-width: 4px;
+    border-radius: 4px;
+}
+
+.vis-item.vis-selected {
+    border-color: green;
+    background-color: lightgreen;
+    border-width: 3px;
+}
+
+
+.vis-time-axis .vis-text {
+    color: rgb(99, 151, 219);
+    font-size: 12pt;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.vis-time-axis .vis-text.vis-major {
+    font-weight: bold;
+    font-size: 20pt;
+    color: rgb(0, 0, 0);
+}
+
+.vis-time-axis .vis-text.vis-minor {
+    font-weight: bold;
+    font-size: 9pt;
+    color: rgb(0, 0, 0);
+}
+
+.vis-time-axis .vis-grid.vis-minor {
+    border-width: 0px;
+    border-color: rgb(167, 167, 167);
+}
+
+.vis-time-axis .vis-grid.vis-major {
+    border-width: 0px;
+    border-color: rgb(0, 0, 0);
+}
+
+/************************************/
+
+.vis-item.red  {
+    background-color: rgb(0, 0, 0);
+    border-width: 2px;
+    border-color: rgb(131, 89, 89);
+    color: rgb(167, 167, 167);
+}
+
+.vis-item.red .item_title  {
+    font-size: 12pt;
+    font-weight: bold;
+    color: rgb(131, 89, 89);
+}
+
+
+.vis-item.red .extra_info  {
+    display: block;
+    line-height: 45%;
+    font-size: 10pt;
+    font-style: italic;
+    color: rgb(167, 167, 167);
+    /*max-width: 70px;
+    word-wrap: break-word;
+    text-align: left;*/
+}
+
+.vis-item.red.vis-selected .extra_info {
+    display: block;
+}
+
+.vis-item.red.vis-selected {
+    /*background-color: rgb(87, 71, 71);*/
+    background-color: rgb(77, 62, 62);
+}
+
+
+/************************************/
+.vis-item.blue  {
+    background-color: rgb(0, 0, 0);
+    border-width: 2px;
+    border-color: rgb(83, 89, 124);
+    color: rgb(83, 89, 124);
+}
+
+.vis-item.blue .item_title  {
+    font-size: 12pt;
+    font-weight: bold;
+    color: rgb(83, 89, 124);
+}
+
+
+.vis-item.blue .extra_info  {
+    display: block;
+    line-height: 45%;
+    font-size: 10pt;
+    font-style: italic;
+    color: rgb(167, 167, 167);
+}
+
+.vis-item.blue.vis-selected .extra_info {
+    display: block;
+}
+
+.vis-item.blue.vis-selected {
+    /*background-color: rgb(87, 71, 71);*/
+    background-color: rgb(59, 62, 80);
+}
+
+/************************************/
+
+/************************************/
+
+.vis-item.green  {
+    background-color: rgb(0, 0, 0);
+    border-width: 2px;
+    border-color: rgb(71, 131, 74);
+    color: rgb(167, 167, 167);
+}
+
+.vis-item.green .item_title  {
+    font-size: 12pt;
+    font-weight: bold;
+    color: rgb(71, 131, 74);
+}
+
+
+.vis-item.green .extra_info  {
+    display: block;
+    line-height: 45%;
+    font-size: 10pt;
+    font-style: italic;
+    color: rgb(167, 167, 167);
+    /*max-width: 70px;
+    word-wrap: break-word;
+    text-align: left;*/
+}
+
+.vis-item.green.vis-selected .extra_info {
+    display: block;
+}
+
+.vis-item.green.vis-selected {
+    /*background-color: rgb(87, 71, 71);*/
+    background-color: rgb(57, 77, 59);
+}
+
+
+/************************************/
+/************************************/
+
+.vis-item.yellow  {
+    background-color: rgb(0, 0, 0);
+    border-width: 2px;
+    border-color: rgb(178, 173, 54);
+    color: rgb(167, 167, 167);
+}
+
+.vis-item.yellow .item_title  {
+    font-size: 12pt;
+    font-weight: bold;
+    color: rgb(178, 173, 54);
+}
+
+
+.vis-item.yellow .extra_info  {
+    display: block;
+    line-height: 45%;
+    font-size: 10pt;
+    font-style: italic;
+    color: rgb(167, 167, 167);
+    /*max-width: 70px;
+    word-wrap: break-word;
+    text-align: left;*/
+}
+
+.vis-item.yellow.vis-selected .extra_info {
+    display: block;
+}
+
+.vis-item.yellow.vis-selected {
+    /*background-color: rgb(87, 71, 71);*/
+    background-color: rgb(103, 97, 45);
+}
+
+
+/************************************/
+/************************************/
+
+.vis-item.violet  {
+    background-color: rgb(0, 0, 0);
+    border-width: 2px;
+    border-color: rgb(162, 78, 155);
+    color: rgb(167, 167, 167);
+}
+
+.vis-item.violet .item_title  {
+    font-size: 12pt;
+    font-weight: bold;
+    color: rgb(162, 78, 155);
+}
+
+
+.vis-item.violet .extra_info  {
+    display: block;
+    line-height: 45%;
+    font-size: 10pt;
+    font-style: italic;
+    color: rgb(167, 167, 167);
+    /*max-width: 70px;
+    word-wrap: break-word;
+    text-align: left;*/
+}
+
+.vis-item.violet.vis-selected .extra_info {
+    display: block;
+}
+
+.vis-item.violet.vis-selected {
+    /*background-color: rgb(87, 71, 71);*/
+    background-color: rgb(101, 67, 103);
+}
+
+
+/************************************/
+/************************************/
+
+.vis-item.gray  {
+    background-color: rgb(0, 0, 0);
+    border-width: 2px;
+    border-color: rgb(99, 99, 99);
+    color: rgb(167, 167, 167);
+}
+
+.vis-item.gray .item_title  {
+    font-size: 12pt;
+    font-weight: bold;
+    color: rgb(99, 99, 99);
+}
+
+
+.vis-item.gray .extra_info  {
+    display: block;
+    line-height: 45%;
+    font-size: 10pt;
+    font-style: italic;
+    color: rgb(167, 167, 167);
+    /*max-width: 70px;
+    word-wrap: break-word;
+    text-align: left;*/
+}
+
+.vis-item.gray.vis-selected .extra_info {
+    display: block;
+}
+
+.vis-item.gray.vis-selected {
+    /*background-color: rgb(87, 71, 71);*/
+    background-color: rgb(84, 84, 84);
+}
+
+
+/************************************/
+.page-title{
+    font-weight: bold;
+    font-size: 20pt;
+    color: rgb(46, 46, 46);
+    padding-bottom: 30px;
+}
+
+.vis-label .vis-inner {
+    min-height: 150px;
+}
+
+div.vis-tooltip {
+    background: black;
+    color: white;
+}
+
+
+h1 {
+    color: white;
+}
+
+
+
+
+
+
+
+
+.vis-foreground .vis-group {
+    position: relative;
+    box-sizing: border-box;
+    border-bottom: 1px solid #191919;
+}
+
+

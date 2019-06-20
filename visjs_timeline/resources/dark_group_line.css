@@ -1,0 +1,25 @@
+.vis-foreground .vis-group {
+    position: relative;
+    box-sizing: border-box;
+    border-bottom: 1px solid #191919;
+}
+
+/*
+These styles make axis/frame colors:
+
+.vis-labelset .vis-label {
+    border-width: 1px;
+    border-color: #191919;
+}
+
+.vis-panel.vis-bottom,
+.vis-panel.vis-center,
+.vis-panel.vis-left,
+.vis-panel.vis-right,
+.vis-panel.vis-top {
+    border: 1px #191919
+}
+
+Its have to be on different places.
+
+*/
