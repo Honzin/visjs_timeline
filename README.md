@@ -54,7 +54,35 @@ items = [visjs_timeline.TimeLineItem(visjs_timeline.ItemTitledContentRender.rend
 
          ]
 
-setting = visjs_timeline.TimeLineSetting(items, groups, "Test Page Title", visjs_timeline.themes.dark_time, "Test details")
+table_1 = visjs_timeline.DetailTable()
+table_1.title = "Table 1"
+table_1.rows = [["Lable 1 ", "Value 1"],
+                ["parameter 1", "value 1"]
+                ]
+
+
+table_2 = visjs_timeline.DetailTable()
+table_2.title = "Table 2"
+table_2.rows = [["Lable 2 ", "Value 2"],
+                ["parameter 2", "value 2"]
+                ]
+
+table_3 = visjs_timeline.DetailTable()
+table_3.title = "Table 3"
+table_3.rows = [["Lable 3 ", "Value 3"],
+                ["parameter 3", "value 3"]
+                ]
+
+
+table_4 = visjs_timeline.DetailTable()
+table_4.title = "Table 4"
+table_4.rows = [["Lable 4 ", "Value 4"],
+                ["parameter 4", "value 4"]
+                ]
+
+details = visjs_timeline.DetailsTablesRender.render([[table_1, table_2],
+                                                     [table_3, table_4]])
+setting = visjs_timeline.TimeLineSetting(items, groups, "Test Page Title", visjs_timeline.themes.dark_time, details)
 
 # Auto create groups
 # setting = visjs_timeline.TimeLineSetting(items, visjs_timeline.GroupsAutoBuilder.build(items), "Test Page Title", visjs_timeline.themes.dark_time, "Test details")

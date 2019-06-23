@@ -46,6 +46,81 @@ class ItemTitledContentRender:
         return result
 
 
+class DetailsTableRender:
+    _template = """
+    <div class="left_block">
+    <div class="details_table_title">%s</div>
+    <table>
+        %s
+        
+        %s
+    </table>
+    </div>
+    """
+
+    _header_column_template = "<th>%s</th>"
+    _row_template = """
+    <tr>
+    %s
+    </tr>
+    """
+
+    _column_template = "<td>%s</td>"
+
+    @classmethod
+    def render(cls, rows, title):
+        cls._render_header(rows[0])
+
+        return cls._template % (title, cls._render_header(rows[0]), cls._render_rows(rows[1:]))
+
+    @classmethod
+    def _render_header(cls, row):
+        return cls._row_template % "\n".join([cls._header_column_template % column for column in row])
+
+    @classmethod
+    def _render_rows(cls, rows):
+        result = ""
+        for row in rows:
+            result += cls._render_row(row)
+        return result
+
+    @classmethod
+    def _render_row(cls, row):
+        return "\n".join([cls._column_template % column for column in row])
+
+
+class DetailTable:
+    def __init__(self):
+        self.rows = []
+        self.title = ""
+
+
+class DetailsTablesRender:
+    _left_alignment_template = """
+    <div class="left_block">
+    %s
+    </div>
+    
+    """
+
+    _details_template = """
+    
+    <div class="details">
+    %s
+    </div>
+    """
+
+    @classmethod
+    def render(cls, tables):
+        result = ""
+        for tables_in_row in tables:
+            tmp_row = ""
+            for table in tables_in_row:
+                tmp_row += DetailsTableRender.render(table.rows, table.title)
+            result += cls._details_template % tmp_row
+        return result
+
+
 class AutoId:
     _id = 0
 
