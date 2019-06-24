@@ -1,6 +1,6 @@
 .details {
     clear: both;
-    color: #191919;
+    color: #242424;
     display: block;
 }
 
@@ -30,7 +30,8 @@
     text-align: center;
 }
 
-.details table, th {
+.details table th {
     font-weight: bold;
+    background: #131313;
 }
 
