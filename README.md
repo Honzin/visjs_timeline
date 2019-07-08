@@ -51,8 +51,14 @@ items = [visjs_timeline.TimeLineItem(visjs_timeline.ItemTitledContentRender.rend
                                      "A",
                                      "gray",
                                      "8A tooltip"),
+         visjs_timeline.TimeLineItem("#9", datetime.datetime(2019, 1, 1, 1, 1, 9),
+                                     "A",
+                                     "gray",
+                                     "9A point tooltip",
+                                     item_type=visjs_timeline.ItemType.point),
 
          ]
+
 
 table_1 = visjs_timeline.DetailTable()
 table_1.title = "Table 1"
@@ -91,5 +97,4 @@ setting = visjs_timeline.TimeLineSetting(items, groups, "Test Page Title", visjs
 visjs_time_line = visjs_timeline.VisJsTimeLine()
 visjs_time_line.render(setting)
 visjs_time_line.save("test_output.html")
-
 ```
