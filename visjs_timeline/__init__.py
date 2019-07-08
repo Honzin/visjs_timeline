@@ -136,8 +136,13 @@ class AutoId:
         AutoId._id = 0
 
 
+class ItemType:
+    box = "box"
+    point = "point"
+
+
 class TimeLineItem:
-    def __init__(self, content, start, group_id, css_class_name, tooltip="", item_id=None):
+    def __init__(self, content, start, group_id, css_class_name, tooltip="", item_id=None, item_type=ItemType.box):
         # TODO: It is not save. Add reserved list to AutoId
         self.item_id = item_id if item_id is not None else AutoId.generate()
         self.content = content
@@ -145,6 +150,7 @@ class TimeLineItem:
         self.group_id = group_id
         self.css_class_name = css_class_name
         self.tooltip = tooltip
+        self.item_type = item_type
         # TODO: image
 
 
@@ -161,7 +167,8 @@ class ItemRender:
                 " start: new Date(%s, %s, %s, %s,%s,%s)," \
                 " group: '%s'," \
                 " className: '%s'," \
-                " title: '%s'},\n"
+                " title: '%s'," \
+                " type: '%s'},\n"
 
     @classmethod
     def render(cls, item):
@@ -175,7 +182,8 @@ class ItemRender:
                                 item.start.second,
                                 item.group_id,
                                 item.css_class_name,
-                                item.tooltip)
+                                item.tooltip,
+                                item.item_type)
 
 
 class GroupRender:

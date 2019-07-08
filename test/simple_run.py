@@ -45,6 +45,11 @@ items = [visjs_timeline.TimeLineItem(visjs_timeline.ItemTitledContentRender.rend
                                      "A",
                                      "gray",
                                      "8A tooltip"),
+         visjs_timeline.TimeLineItem("#9", datetime.datetime(2019, 1, 1, 1, 1, 9),
+                                     "A",
+                                     "gray",
+                                     "9A point tooltip",
+                                     item_type=visjs_timeline.ItemType.point),
 
          ]
 
